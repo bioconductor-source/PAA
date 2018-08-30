@@ -42,10 +42,11 @@ The recommended way to install \Biocpkg{PAA} is to type the commands described
 below in the \R{} console (note: an active internet connection is needed):
 <<install, eval=FALSE, results=hide>>=
 # only if you install a Bioconductor package for the first time
-source("http://www.bioconductor.org/biocLite.R")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
 # else
-library("BiocInstaller")
-biocLite("PAA", dependencies=TRUE)
+library("BiocManager")
+BiocManager::install("PAA", dependencies=TRUE)
 @
 This will install \Biocpkg{PAA} including all dependencies.
 
