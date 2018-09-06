@@ -10,10 +10,11 @@ BiocStyle::latex()
 ### code chunk number 2: install (eval = FALSE)
 ###################################################
 ## # only if you install a Bioconductor package for the first time
-## source("http://www.bioconductor.org/biocLite.R")
+## if (!requireNamespace("BiocManager", quietly=TRUE))
+    ## install.packages("BiocManager")
 ## # else
-## library("BiocInstaller")
-## biocLite("PAA", dependencies=TRUE)
+## library("BiocManager")
+## BiocManager::install("PAA", dependencies=TRUE)
 
 
 ###################################################
